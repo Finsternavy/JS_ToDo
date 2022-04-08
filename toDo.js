@@ -10,7 +10,7 @@ function addTask(){
     
     let innerHTMLText = "";
     for(let i = 0; i < taskArray.length; i++){
-        innerHTMLText = innerHTMLText + `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${(i+1) + ". " + taskArray[i]}</li></div>`;
+        innerHTMLText = innerHTMLText + `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${taskArray[i]}</li></div>`;
     }
 
     document.getElementById("task-list").innerHTML=`
@@ -24,8 +24,9 @@ function removeTask(taskIndex){
     console.log(taskArray);
 
     let innerHTMLText = "";
+    
     for(let i = 0; i < taskArray.length; i++){
-        innerHTMLText = innerHTMLText + `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${(i+1) + ". " + taskArray[i]}</li></div>`;
+        innerHTMLText = innerHTMLText + `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${taskArray[i]}</li></div>`;
     }
 
     document.getElementById("task-list").innerHTML=`

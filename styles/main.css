@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     background-color: rgb(25, 25, 25);
+    font-family: 'Space Mono', monospace;
 }
 h1,
 .button{
@@ -23,7 +24,7 @@ h1,
     color: rgb(200, 200, 200);
 }
 h1{
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 40px;
 }
 .button button{
@@ -40,7 +41,7 @@ h1{
     z-index: 1;
     color: rgb(25, 25, 25);
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     transition: background-position .5s;
 }
@@ -65,8 +66,6 @@ h1{
     box-shadow: 0 0 5px rgb(0, 0, 0);
     color: rgb(59, 212, 250);
 }
-.button button:hover::before{
-}
 .list-button{
     position: relative;
     top: 10px;
@@ -79,6 +78,7 @@ h1{
     margin-right: 25px;
     background-color: rgb(100, 100, 100);
     color: rgb(25, 25, 25);
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 20px;
     text-align: left;
@@ -123,7 +123,7 @@ ol li{
     font-size: 24px;
     padding: 30px;
     border: 8px solid rgb(25, 25, 25);
-    border-radius: 50px;
+    border-radius: 70px;
     width: 100%;
     flex-wrap:wrap;
     background-image: var(--gradient);
@@ -148,10 +148,6 @@ ol li::after{
 .list-button:focus + .list-item{
     background-position: left;
 }
-/* .list-item:hover{
-    background-position: center;
-} */
-
 footer{
     margin-bottom: 200px;
 }
