@@ -1,4 +1,174 @@
+:root{
+    --default-block-margin: 20px;
+    --gradient: linear-gradient(
+        to left,
+        rgb(138, 43, 226),
+        rgb(138, 43, 226),
+        rgb(138, 43, 226),
+        rgb(59, 212, 250),
+        rgb(59, 212, 250),
+        rgb(59, 212, 250)
+        
+    );
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(25, 25, 25);
+}
+h1,
+.button{
+    text-align: center;
+    color: rgb(200, 200, 200);
+}
+h1{
+    margin-top: 100px;
+    font-size: 40px;
+}
+.button button{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100px;
+    width: 250px;
+    background-image: var(--gradient);
+    background-size: 400%;
+    background-position: right;
+    border: 1px solid rgb(25, 25, 25);
+    border-radius: 50px;
+    z-index: 1;
+    color: rgb(25, 25, 25);
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-position .5s;
+}
+.button button:active:hover{
+    color: blueviolet;
+    background-position: left;
+}
+.button button::before{
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 89%;
+    background-color: rgb(100, 100, 100);
+    top: 10%;
+    left: 4.75%;
+    border: 3px solid rgb(25, 25, 25);
+    border-radius: 50px;
+    z-index: -1;
+}
+.button button:hover{
+    background-position: left;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    color: rgb(59, 212, 250);
+}
+.button button:hover::before{
+}
 .list-button{
-    min-height: 20px;
-    min-width: 40px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+    height: 80px;
+    width: 150px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50px;
+    padding-inline: 20px;
+    margin-right: 25px;
+    background-color: rgb(100, 100, 100);
+    color: rgb(25, 25, 25);
+    font-weight: 900;
+    font-size: 20px;
+    text-align: left;
+    z-index: 0;
+}
+.list-button:hover{
+    border: 2px solid rgb(59, 212, 250);
+    color: rgb(59, 212, 250);
+    background-color: rgb(59, 212, 250);
+    color: rgb(25, 25, 25);
+}
+h2{
+    color: rgb(200, 200, 200);
+    text-align: center;
+    border-bottom: 3px solid rgb(200, 200, 200);
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 50px;
+    padding-bottom: var(--default-block-margin);
+}
+ol{
+    position: relative;
+    color: rgb(200, 200, 200);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 90%;
+    margin-inline: auto;
+}
+.task-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ol li{
+    position: relative;
+    top: 0;
+    left: -50px;
+    margin-top: var(--default-block-margin);
+    font-size: 24px;
+    padding: 30px;
+    border: 8px solid rgb(25, 25, 25);
+    border-radius: 50px;
+    width: 100%;
+    flex-wrap:wrap;
+    background-image: var(--gradient);
+    background-size: 500%;
+    background-position: right;
+    transition: background-position 1s ease;
+    z-index: 1;
+}
+ol li::after{
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 1.2%;
+    height: 80%;
+    width: 97%;
+    background-color: rgb(25, 25, 25);
+    border: 1px solid rgb(25, 25, 25);
+    border-radius: 50px;
+    z-index: -1;
+}
+.list-button:hover + .list-item,
+.list-button:focus + .list-item{
+    background-position: left;
+}
+/* .list-item:hover{
+    background-position: center;
+} */
+
+footer{
+    margin-bottom: 200px;
+}
+
+@media (min-width: 678px){
+    h2{
+        width: 40%;
+        font-size: 40px;
+    }
+    ol li{
+        width: 40%;
+        left: -50px;
+    }
+    .list-button{
+        position: relative;
+        left: 80px;
+        font-size: 25px;
+        padding-inline: 15px;
+    }
 }
