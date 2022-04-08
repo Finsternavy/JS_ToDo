@@ -120,7 +120,7 @@ ol li{
     top: 0;
     left: -50px;
     margin-top: var(--default-block-margin);
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     border: 8px solid rgb(25, 25, 25);
     border-radius: 70px;
@@ -141,7 +141,7 @@ ol li::after{
     width: 97%;
     background-color: rgb(25, 25, 25);
     border: 1px solid rgb(25, 25, 25);
-    border-radius: 50px;
+    border-radius: 70px;
     z-index: -1;
 }
 .list-button:hover + .list-item,
@@ -160,6 +160,7 @@ footer{
     ol li{
         width: 40%;
         left: -50px;
+        font-size: 24px;
     }
     .list-button{
         position: relative;
