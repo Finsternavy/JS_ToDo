@@ -61,6 +61,9 @@
 .update-colors-button:hover{
     background-position: left;
 }
+main{
+    margin-bottom: 200px;
+}
 h1,
 .button{
     text-align: center;
@@ -101,8 +104,8 @@ h1{
 .button button::before{
     content: "";
     position: absolute;
-    height: 75%;
-    width: 89%;
+    height: 72%;
+    width: 87.5%;
     background-color: rgb(100, 100, 100);
     top: 10%;
     left: 4.75%;
@@ -200,7 +203,10 @@ ol li::after{
     background-position: left;
 }
 footer{
-    margin-top: 380px;
+    position: fixed;
+    z-index: 5000;
+    bottom: 0;
+    width: 100%;
     border-top: 1px solid var(--primary-color);
 }
 footer > *{
