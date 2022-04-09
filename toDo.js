@@ -3,10 +3,8 @@ let taskArray = new Array();
 
 // add a task to the task array
 function addTask(){
-
     //get the task from the user
     task = prompt("Enter a task: ");
-    
     // only place the task in the array if a task is actually typed
     if(task != "" && task != null){
         // add the task
@@ -14,18 +12,14 @@ function addTask(){
         // keep track and verify
         console.log(taskArray);
     }
-    
     // local variable to clear value automatically after each task creation
     let innerHTMLText = "";
-
     // iterated depending on number of elements in the array
     for(let i = 0; i < taskArray.length; i++){
-
         // add the html for each element into a single string
         // also dynamically creates delete button for each task
-        innerHTMLText = innerHTMLText + `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${taskArray[i]}</li></div>`;
+        innerHTMLText += `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${taskArray[i]}</li></div>`;
     }
-
     document.getElementById("task-list").innerHTML=`
         ${innerHTMLText}
         `;
@@ -40,10 +34,23 @@ function removeTask(taskIndex){
     let innerHTMLText = "";
 
     for(let i = 0; i < taskArray.length; i++){
-        innerHTMLText = innerHTMLText + `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${taskArray[i]}</li></div>`;
+        innerHTMLText += `<div class="task-container"><button onclick="removeTask(${i});" class="list-button">X</button><li class="list-item">${taskArray[i]}</li></div>`;
     }
 
     document.getElementById("task-list").innerHTML=`
         ${innerHTMLText}
         `;
+}
+
+let rootElement = document.querySelector(':root');
+
+function changeColors(){
+    rootElement.style.setProperty('--primary-color', 
+    document.getElementById('primary-color-picker').value)
+
+    rootElement.style.setProperty('--secondary-color', 
+    document.getElementById('secondary-color-picker').value)
+
+    rootElement.style.setProperty('--accent-color', 
+    document.getElementById('accent-color-picker').value)
 }

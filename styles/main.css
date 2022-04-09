@@ -1,7 +1,7 @@
 :root{
     /*rgb(138, 43, 226) purple*/
     /*rgb(59, 212, 250) light-blue*/
-    --default-block-margin: 20px;
+    --default-block-margin: 10px;
     --primary-color: rgb(138, 43, 226);
     --secondary-color: rgb(58, 248, 0);
     --accent-color: rgb(200, 200, 200);
@@ -22,13 +22,52 @@
     background-color: rgb(25, 25, 25);
     font-family: 'Space Mono', monospace;
 }
+.color-change-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.color-picker-container{
+    color: var(--accent-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+.color-picker-container > *{
+    margin-inline: 10px;
+}
+.color-picker-container input[type=color]{
+    border-style: none;
+    border: 1px solid rgb(25, 25, 25);
+    height: 40px;
+    width: 40px;
+}
+.update-colors-button{
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    color: var(--accent-color);
+    border: 3px solid rgb(25, 25, 25);
+    border-radius: 20px;
+    background-image: var(--gradient);
+    background-size: 400%;
+    background-position: right;
+    transition: background-position .5s;
+}
+.update-colors-button:hover{
+    background-position: left;
+}
 h1,
 .button{
     text-align: center;
     color: var(--accent-color);
 }
 h1{
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 40px;
 }
 .to{
@@ -39,10 +78,10 @@ h1{
 }
 .button button{
     position: relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 100px;
-    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 75px;
+    width: 200px;
     background-image: var(--gradient);
     background-size: 400%;
     background-position: right;
@@ -78,9 +117,9 @@ h1{
 }
 .list-button{
     position: relative;
-    top: 10px;
+    top: 5px;
     left: 40px;
-    height: 80px;
+    height: 65px;
     width: 150px;
     border: 1px solid rgb(100, 100, 100);
     border-left: 5px solid var(--secondary-color);
@@ -102,7 +141,7 @@ h1{
     color: rgb(25, 25, 25);
 }
 h2{
-    color: rgb(200, 200, 200);
+    color: var(--accent-color);
     text-align: center;
     border-bottom: 3px solid var(--accent-color);
     width: 90%;
@@ -132,7 +171,8 @@ ol li{
     left: -50px;
     margin-top: var(--default-block-margin);
     font-size: 16px;
-    padding: 30px;
+    padding: 15px;
+    color: var(--accent-color);
     border: 8px solid rgb(25, 25, 25);
     border-radius: 70px;
     width: 100%;
