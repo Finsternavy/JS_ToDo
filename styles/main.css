@@ -160,7 +160,39 @@ ol li::after{
     background-position: left;
 }
 footer{
-    margin-bottom: 200px;
+    margin-top: 380px;
+    border-top: 1px solid var(--primary-color);
+}
+footer > *{
+    position: relative;
+    min-width: 100%;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+}
+.by{
+    color: var(--primary-color);
+}
+.footer-container{
+    position: relative;
+    margin-top: 10px;
+    height: 50px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--secondary-color);
+}
+.footer-container i{
+    transform: scale(2);
+    color: var(--secondary-color);
+}
+.footer-container i:hover{
+    color: var(--primary-color);
+}
+.fa-github{
+    text-align: right;
 }
 
 @media (min-width: 678px){
@@ -181,5 +213,8 @@ footer{
     }
     h1{
         font-size: 60px;
+    }
+    .footer-container i{
+        transform: scale(3);
     }
 }
