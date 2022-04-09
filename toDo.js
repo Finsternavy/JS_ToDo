@@ -3,8 +3,10 @@ let taskArray = new Array();
 
 // add a task to the task array
 function addTask(){
+
     //get the task from the user
     task = prompt("Enter a task: ");
+    
     // only place the task in the array if a task is actually typed
     if(task != "" && task != null){
         // add the task
